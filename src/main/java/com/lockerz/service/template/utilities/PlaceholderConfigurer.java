@@ -12,6 +12,9 @@ import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 
 public class PlaceholderConfigurer extends PropertyPlaceholderConfigurer implements FactoryBean<Properties> {
 	
+	// need this
+	public static final String HANDLE = "template";
+	
 	// need these for storing defaults
     private static final String PROPERTY_KEY = "slug";
     private static final String DEFAULT_CONFIG = "slug";

@@ -27,3 +27,6 @@ c3po.jdbc.maxIdleTime=30
 
 # lockerz authentications
 authorizer.token=sometoken
+
+# ping endpoint
+ping.endpoint=http://localhost:8080/follow_service-1.0-SNAPSHOT/controller/action/?id=1

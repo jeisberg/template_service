@@ -22,7 +22,7 @@
     <property name="basedir" value="/Users/jeisberg/Documents/workspace/template_service"/>
     <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/var/folders/Np/NpvW3SXVGTm9Rd+rf9X6aE+++TI/-Tmp-/surefirebooter1258430666220793337.jar"/>
+    <property name="surefire.real.class.path" value="/var/folders/Np/NpvW3SXVGTm9Rd+rf9X6aE+++TI/-Tmp-/surefirebooter1997923348515922618.jar"/>
     <property name="java.io.tmpdir" value="/var/folders/Np/NpvW3SXVGTm9Rd+rf9X6aE+++TI/-Tmp-/"/>
     <property name="line.separator" value="
 "/>
