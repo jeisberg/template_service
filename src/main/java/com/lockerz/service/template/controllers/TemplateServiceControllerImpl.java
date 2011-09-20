@@ -5,8 +5,8 @@ import java.io.IOException;
 import org.slf4j.LoggerFactory;
 import org.codehaus.jackson.map.ObjectMapper;
 import javax.servlet.http.HttpServletResponse;
-import com.lockerz.service.template.models.SlugModelImpl;
 import org.springframework.stereotype.Controller;
+import com.lockerz.service.template.models.SlugModelImpl;
 import com.lockerz.service.template.services.ServiceImpl;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class TemplateServiceControllerImpl extends ServiceControllerImpl {
 	
 	// need these
 	public static final String MESSAGE = "message";
-	public static final String ERRORCODE = "errorcode";
+	public static final String STATUS_CODE = "statusCode";
 
 	@Autowired
     public void setService(ServiceImpl service) {
@@ -42,7 +42,7 @@ public class TemplateServiceControllerImpl extends ServiceControllerImpl {
     		// create the message
     		String message = this.getClass().getName() + " -> " + e.getMessage();
     		// throw new exception here
-    		throw new ServiceControllerException(e.getErrorCode(), e.getStatus(), message);
+    		throw new ServiceControllerException(message);
     	}
     }
 	
@@ -51,12 +51,12 @@ public class TemplateServiceControllerImpl extends ServiceControllerImpl {
     public void handleException(ServiceControllerException e, HttpServletResponse response) {
     	// try
         try {
-            // set the status here
-            response.setStatus(e.getStatus());
+        	// set the status here
+            response.setStatus(e.getHttpStatusCode());
         	// add the message here
             response.addHeader(MESSAGE, e.getMessage());
             // add the header here
-            response.addIntHeader(ERRORCODE, e.getErrorCode());
+            response.addIntHeader(STATUS_CODE, e.getStatusCode());
             // write the value
             new ObjectMapper().writeValue(response.getWriter(), e);
         // catch here

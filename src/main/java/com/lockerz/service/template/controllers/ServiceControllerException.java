@@ -1,46 +1,20 @@
 package com.lockerz.service.template.controllers;
 
-import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
+import com.lockerz.service.template.utilities.RestException;
 
-public class ServiceControllerException extends Exception {
+public class ServiceControllerException extends RestException {
 
+	// need this
 	private static final long serialVersionUID = 1L;
-
-	protected int status = HttpServletResponse.SC_INTERNAL_SERVER_ERROR ; 
-	protected int errorCode = 0;
-	
-	public ServiceControllerException() {
-		// call parent
-		super();
-	}
 	
 	public ServiceControllerException(String message) {
 		// call parent
 		super(message);
 	}
 	
-	public ServiceControllerException(int errorCode, int status, String message) {
+	public ServiceControllerException(String message, HashMap<Double, String> messages, int httpStatusCode, int statusCode) {
 		// call parent
-		super(message);
-		// set the error code
-		this.setErrorCode(errorCode);
-		// set the status
-		this.setStatus(status);
-	}
-	
-	public void setErrorCode(int errorCode) {
-		this.errorCode = errorCode;
-	}
-
-	public int getErrorCode() {
-		return errorCode;
-	}
-	
-	public void setStatus(int status) {
-		this.status = status;
-	}
-
-	public int getStatus() {
-		return status;
+		super(message, messages, httpStatusCode, statusCode);
 	}
 }
