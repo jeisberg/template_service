@@ -1,19 +1,15 @@
 package com.lockerz.service.template.dao;
 
 import com.lockerz.service.template.dao.Dao;
-import org.springframework.orm.hibernate3.HibernateTemplate;
+
+import org.hibernate.Session;
 
 public abstract class DaoImpl implements Dao {
 
-	protected HibernateTemplate hibernateTemplate;
-
-    public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
-        // set the template here
-    	this.hibernateTemplate = hibernateTemplate;
-    }
-
-    public HibernateTemplate getHibernateTemplate() {
-    	// return the template here
-        return hibernateTemplate;
-    }
+	protected Session session;
+	
+	public void setSession(Session session) {
+		// set here
+		this.session = session;
+	}	
 }

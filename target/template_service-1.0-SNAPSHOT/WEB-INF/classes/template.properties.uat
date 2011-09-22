@@ -14,6 +14,10 @@ hibernate.show_sql=true
 hibernate.format_sql=true
 hibernate.hbm2ddl.auto=true
 
+# session settings
+hibernate.current_session_context_class=thread
+hibernate.transaction.factory_class=org.hibernate.transaction.JDBCTransactionFactory
+
 # datasource settings
 c3po.jdbc.driver=com.mysql.jdbc.Driver
 c3po.jdbc.url=jdbc:mysql://localhost/test
@@ -27,3 +31,6 @@ c3po.jdbc.maxIdleTime=30
 
 # lockerz authentications
 authorizer.token=sometoken
+
+# ping endpoint
+ping.endpoint=http://localhost:8080/follow_service-1.0-SNAPSHOT/controller/action/?id=1

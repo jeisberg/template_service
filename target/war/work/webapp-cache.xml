@@ -17,7 +17,9 @@
           <string>WEB-INF/classes/com/lockerz/service/template/controllers/TemplateServiceControllerImpl.class</string>
           <string>WEB-INF/classes/com/lockerz/service/template/dao/Dao.class</string>
           <string>WEB-INF/classes/com/lockerz/service/template/dao/DaoException.class</string>
+          <string>WEB-INF/classes/com/lockerz/service/template/dao/DaoFactory.class</string>
           <string>WEB-INF/classes/com/lockerz/service/template/dao/DaoImpl.class</string>
+          <string>WEB-INF/classes/com/lockerz/service/template/dao/TemplateDaoFactory.class</string>
           <string>WEB-INF/classes/com/lockerz/service/template/dao/TemplateDaoImpl.class</string>
           <string>WEB-INF/classes/com/lockerz/service/template/models/Model.class</string>
           <string>WEB-INF/classes/com/lockerz/service/template/models/ModelException.class</string>
@@ -28,6 +30,7 @@
           <string>WEB-INF/classes/com/lockerz/service/template/services/ServiceImpl.class</string>
           <string>WEB-INF/classes/com/lockerz/service/template/services/TemplateServiceImpl.class</string>
           <string>WEB-INF/classes/com/lockerz/service/template/utilities/PlaceholderConfigurer.class</string>
+          <string>WEB-INF/classes/com/lockerz/service/template/utilities/RestException.class</string>
           <string>WEB-INF/classes/logback-test.xml</string>
           <string>WEB-INF/classes/logback.xml</string>
           <string>WEB-INF/classes/template.properties</string>
